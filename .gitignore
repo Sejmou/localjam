@@ -26,3 +26,6 @@ test-results
 
 # PGlite
 .pglite
+
+# Generated migrations (Node PGlite sync)
+static/migrations/
