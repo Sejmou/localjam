@@ -1,11 +1,15 @@
 import { defineConfig } from 'drizzle-kit';
 
-if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is not set');
-
 export default defineConfig({
 	schema: './src/lib/server/db/schema.ts',
 	dialect: 'postgresql',
-	dbCredentials: { url: process.env.DATABASE_URL },
+	driver: 'pglite',
+	dbCredentials: {
+		// Directory for PGlite data when running drizzle-kit in Node (push, migrate, studio).
+		// Your app can still use idb:// for browser IndexedDB at runtime.
+		url: './.pglite'
+	},
+	out: './drizzle',
 	verbose: true,
 	strict: true
 });

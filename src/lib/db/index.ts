@@ -2,6 +2,7 @@ import { drizzle } from 'drizzle-orm/pglite';
 import { PGlite } from '@electric-sql/pglite';
 import * as schema from './schema';
 
-// PG Lite database, persisted to IndexedDB
-const client = new PGlite('idb://my-pgdata');
+// in-memory database; TODO: figure out why IndexedDB persistence (e.g. 'idb://localjam-db') doesn't work
+const client = new PGlite();
+await client.waitReady;
 export const db = drizzle(client, { schema });
