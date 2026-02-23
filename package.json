@@ -46,6 +46,6 @@
 		"vite-plugin-devtools-json": "^1.0.0"
 	},
 	"dependencies": {
-		"postgres": "^3.4.8"
+		"@electric-sql/pglite": "^0.3.15"
 	}
 }
