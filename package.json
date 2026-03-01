@@ -23,6 +23,7 @@
 		"@eslint/compat": "^2.0.2",
 		"@eslint/js": "^9.39.2",
 		"@playwright/test": "^1.58.1",
+		"@proj-airi/unplugin-drizzle-orm-migrations": "^0.1.4",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.50.2",
 		"@sveltejs/vite-plugin-svelte": "^6.2.4",
@@ -45,7 +46,9 @@
 		"vite-plugin-devtools-json": "^1.0.0"
 	},
 	"dependencies": {
+		"@educandu/multitrack-audio-player": "^1.0.4",
 		"@electric-sql/pglite": "^0.3.15",
+		"@proj-airi/drizzle-orm-browser-migrator": "^0.1.4",
 		"drizzle-orm": "^0.45.1"
 	}
 }
