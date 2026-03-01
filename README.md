@@ -1,6 +1,6 @@
 # LocalJam
 
-This is the code repository for LocalJam, my attempt at realizing my vision of a local-first multi-track audio player that you can use to hone your craft as a musician.
+This is the code repository for LocalJam, my attempt at realizing my vision of a local-first multi-track audio player that you can use to hone your craft as a musician using any multi-track audio files you own (e.g. ones created from MP3s with AI or actual exports of stems from your DAW).
 
 ## Feature Roadmap
 
