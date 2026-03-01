@@ -1,5 +1,5 @@
 {
-  "id": "2db04d50-1251-43f2-b561-9bc12fb7855a",
+  "id": "f1fce65a-aad8-4ef1-a294-0a3c54fbc07c",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -40,9 +40,15 @@
       "name": "tracks",
       "schema": "",
       "columns": {
-        "song_id": {
-          "name": "song_id",
-          "type": "uuid",
+        "content_hash": {
+          "name": "content_hash",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "file_extension": {
+          "name": "file_extension",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
         },
@@ -52,8 +58,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "file_id": {
-          "name": "file_id",
+        "song_id": {
+          "name": "song_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
@@ -71,7 +77,7 @@
           "columnsTo": [
             "id"
           ],
-          "onDelete": "no action",
+          "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },

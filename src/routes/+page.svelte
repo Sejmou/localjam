@@ -1,16 +1,21 @@
 <script lang="ts">
-	import { db } from '$lib/db';
-	import { sql } from 'drizzle-orm';
+	import { Input } from '$lib/components/ui/input';
+	import { Label } from '$lib/components/ui/label';
+	import { extractAndStoreAudio } from './data-processing';
 
-	const test = db.execute(sql`SELECT 1 + 2 AS test`);
+	let zipFiles = $state<FileList | undefined>(undefined);
+
+	$effect(() => {
+		if (zipFiles) {
+			const file = zipFiles[0];
+			if (file) {
+				extractAndStoreAudio(file).then((v) => console.log(v));
+			}
+		}
+	});
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
-{#await test}
-	<p>Loading...</p>
-{:then result}
-	<p>{JSON.stringify(result.rows)}</p>
-{:catch error}
-	<p>{error.message}</p>
-{/await}
+<div class="grid w-full max-w-sm items-center gap-1.5">
+	<Label for="new-song">Upload Song Zip File</Label>
+	<Input id="new-song" type="file" accept=".zip" bind:files={zipFiles} />
+</div>
