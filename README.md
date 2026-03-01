@@ -17,7 +17,12 @@ These are the features I would like to implement - some are far more complicated
   - [ ] Loop
   - [ ] Playlists
 - [ ] Cross-device sync (without central server)
+- [ ] Mobile App (MUST work offline; PWA? Native App Wrapper, e.g. Capacitor?)
+  - [ ] Basic functionality
+  - [ ] Playback controls from lock screen and/or notification bar
+  - [ ] 'Pill' (Notch Widget; iOS + Android, if something like that exists there)
 - [ ] Additional local processing?
+- [ ] Desktop App (Tauri?)
 
 ## Tech Stack, Design Philosophy
 
